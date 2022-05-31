@@ -31,27 +31,27 @@ class Solution
       ArrayList<Integer> list=new ArrayList<>();
       for(int i=M;i<=N;i++)
       {
-         if(isPrime(i)==1)
+         if(isPrime(i))
          list.add(i);
       }
       return list;
     }  
      
-       public int isPrime(int n)
+       public boolean isPrime(int n)
         {
         if(n==0||n==1)
         {
-          return 0;  
+          return false;  
         } 
         for(int i=2;i<=Math.sqrt(n);i++)
         {
           if(n%i==0)
           {
-            return 0;
+            return false;
           } 
             
         }
-        return 1; 
+        return true; 
       }
     
 }
