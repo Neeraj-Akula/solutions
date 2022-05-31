@@ -27,7 +27,7 @@ class Solution
 {
     int thirdLargest(int a[], int n)
     {
-	  if(n<3)
+	  if(a.length<3)
 	    return -1;
 	  else
 	    Arrays.sort(a);
