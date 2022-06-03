@@ -67,11 +67,6 @@ class Solution {
            st.remove(i);
          }
         } 
-         int res=0;
-         for(int j=0;j<kia.size();j++)
-         {
-           res++;
-         }
-        return res;
+        return kia.size();
     }
 };
