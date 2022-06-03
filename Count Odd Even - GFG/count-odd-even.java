@@ -34,10 +34,6 @@ class Solution
 {
     public void countOddEven(int[] arr, int n)
     {
-        if(n==0)
-        {
-         return;   
-        }
         int count_odd=0;
         int count_even=0;
         for(int i=0;i<n;i++)
