@@ -108,22 +108,18 @@ class Node {
         left = right = null;
     }
 } */
-class Solution 
-{   public void order(ArrayList<Integer>kia,Node root)
-    {
-      if(root==null)
-      {
-       return;  
-      }
-       order(kia,root.left);
-       kia.add(root.data);
-       order(kia,root.right);
-    }   
-    
+class Solution {
+    // Function to return a list containing the inorder traversal of the tree.
     ArrayList<Integer> inOrder(Node root)
     {
-        ArrayList<Integer>kia=new ArrayList<>();
-        order(kia,root);
-        return kia;
+        ArrayList<Integer> res = new ArrayList<>();
+        {
+        if(root == null) 
+            return res;
+        res.addAll(inOrder(root.left));
+        res.add(root.data);
+        res.addAll(inOrder(root.right));
+        return res;
+        }
     }
 }
