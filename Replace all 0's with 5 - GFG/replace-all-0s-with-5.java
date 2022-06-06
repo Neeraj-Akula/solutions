@@ -18,9 +18,19 @@ class Convert_To_Five {
 class GfG {
     int convertfive(int num)
     {
-      String y=Integer.toString(num);
-      String z=y.replace('0','5');
-      int k=Integer.parseInt(z);
-      return k;
+      int ans=0;
+      int count =1;
+      while(num>0)
+      {
+        int rem=num%10;
+        if(rem==0)
+        {
+          rem=5;  
+        }
+        ans=ans+(rem*count);
+        num=num/10;
+        count=count*10;
+      }
+      return ans;
     }
 }
