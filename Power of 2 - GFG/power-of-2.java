@@ -40,14 +40,19 @@ class Solution{
         {
          return false;   
         }
-        else if(n==1)
+        else
         {
-          return true;  
+          if((n&(n-1))==0)
+          {
+            return true;   
+          }
+          else
+          {
+           return false;   
+          }
         }
-        return (n&(n-1))==0?true:false;
        
-        
-        
+    
         
     }
     
