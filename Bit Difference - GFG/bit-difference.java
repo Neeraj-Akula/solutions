@@ -14,17 +14,14 @@ class Solution{
     // Function to find number of bits needed to be flipped to convert A to B
     public static int countBitsFlip(int a, int b)
     {
-      int count=0;
-      for(int i=0;i<32;i++)
-      {
-        if((a&1<<i)!=(b&1<<i))
+        int n = a^b;
+        int ans =0;
+        while(n>0)
         {
-          count++;
-          
-        } 
-      }
-      return count;
-        
+            ans ++;
+            n=n&(n-1);
+        }
+        return ans;
         
         
     }
